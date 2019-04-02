@@ -4,4 +4,4 @@ jdk:
   - openjdk8
 
 script:
-  - ./gradlw clean build
+  - ./gradlew clean build
