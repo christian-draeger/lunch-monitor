@@ -46,8 +46,12 @@ test {
 task stage(dependsOn: ['build', 'clean'])
 build.mustRunAfter clean
 
+jar.enabled = false
+
 // This task will generate a fat JAR and put it in the ./build/libs/ directory
 shadowJar {
+    version = null
+    classifier = null
     manifest {
         attributes 'Main-Class': "io.ktor.server.netty.EngineMain"
     }
