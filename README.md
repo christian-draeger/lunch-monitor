@@ -5,9 +5,9 @@ Lunch Monitor [![Build Status](https://travis-ci.org/christian-draeger/lunch-mon
     
 ### Production usage
     
-Assembles a jar archive containing the main classes:
+Assembles a deployable fat-jar:
 
-    ./gradlew jar
+    ./gradlew stage
     
 ### Local Development
 
