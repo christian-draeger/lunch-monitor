@@ -1,48 +1,53 @@
 package it.skrape.ui
 
-import it.skrape.utils.css
-import kotlinx.css.*
-import kotlinx.html.HEAD
+import azadev.kotlin.css.*
+import azadev.kotlin.css.colors.rgb
+import azadev.kotlin.css.dimens.em
+import azadev.kotlin.css.dimens.percent
+import azadev.kotlin.css.dimens.px
 
-fun HEAD.styling() = css {
-    body {
-        backgroundColor = Color("#ffebcd")
-        fontFamily = "Arial"
-        fontSize = 1.em
+fun styling() =
+    Stylesheet {
+        body {
+            background = rgb(250,216,0)
+            background = "linear-gradient(90deg, rgba(255,245,184,1) 0%, rgba(247,247,149,1) 43%, rgba(255,232,221,1) 100%)"
+            fontFamily = "Arial"
+            fontSize = 1.em
+        }
+        h1 {
+            textAlign = CENTER
+        }
+        ".meal" {
+            display = INLINE_BLOCK
+            backgroundImage = "url(/static/meal.jpeg)"
+            backgroundSize = "cover"
+            borderRadius = 10.px
+            margin = "10px"
+            padding = "10px"
+            width = 30.percent
+            minHeight = 200.px
+            fontSize = 1.em
+            position = RELATIVE
+        }
+        ".meal p" {
+            margin = "10%"
+            fontSize = 1.3.em
+            fontWeight = BOLD
+            textShadow = "1px -1px 0px #ffffff;"
+            color = 0x006400
+        }
+        ".price" {
+            position = ABSOLUTE
+            display = "flex"
+            borderRadius = 50.px
+            color = WHITE
+            fontWeight = BOLD
+            backgroundColor = RED
+            padding = "15px"
+            fontSize = 1.5.em
+            alignItems = CENTER
+            right = 10.px
+            bottom = 10.px
+            height = 20.px
+        }
     }
-    h1 {
-        textAlign = TextAlign.center
-    }
-    rule(".meal") {
-        display = Display.inlineBlock
-        backgroundImage = Image("url(/static/meal.jpeg)")
-        backgroundSize = "cover"
-        borderRadius = 10.px
-        margin = "10px"
-        padding = "10px"
-        width = 30.pct
-        minHeight = 200.px
-        fontSize = 1.em
-        position = Position.relative
-    }
-    rule(".meal p") {
-        margin = "10%"
-        fontSize = 1.3.em
-        fontWeight = FontWeight.bold
-        color = Color("#006400")
-    }
-    rule(".price") {
-        position = Position.absolute
-        display = Display.flex
-        borderRadius = 50.px
-        color = Color.white
-        fontWeight = FontWeight.bold
-        backgroundColor = Color.red
-        padding = "15px"
-        fontSize = 1.5.em
-        alignItems = Align.center
-        right = 10.px
-        bottom = 10.px
-        height = 20.px
-    }
-}
