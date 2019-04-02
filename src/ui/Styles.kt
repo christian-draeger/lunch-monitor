@@ -50,4 +50,9 @@ fun styling() =
             bottom = 10.px
             height = 20.px
         }
+        ".restaurant" {
+            color = RED
+            fontSize = 1.3.em
+            marginLeft = 10.percent
+        }
     }

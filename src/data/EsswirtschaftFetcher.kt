@@ -1,7 +1,7 @@
 package it.skrape.data
 
 import it.skrape.domain.Meal
-import it.skrape.domain.Restautant
+import it.skrape.domain.Restaurant
 import it.skrape.extract
 import it.skrape.selects.elements
 import it.skrape.skrape
@@ -17,7 +17,7 @@ class EsswirtschaftFetcher {
 
         return raw.map {
             val meal = extractMeal(it.text())
-            Meal(priceInCent = meal.first, name = meal.second, restaurant = Restautant.ESSWIRTSCHAFT)
+            Meal(priceInCent = meal.first, name = meal.second, restaurant = Restaurant.ESSWIRTSCHAFT)
         }
     }
 
