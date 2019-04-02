@@ -1,2 +1,6 @@
+build:
+  config:
+    PORT: 8080
+
 run:
   web: java -jar build/libs/lunch-monitor.jar
