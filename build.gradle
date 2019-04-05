@@ -43,7 +43,10 @@ test {
 }
 
 // task needed by heroku
-task stage(dependsOn: ['build', 'clean'])
+task stage {
+    dependsOn installDist
+}
+
 build.mustRunAfter clean
 
 jar.enabled = false
