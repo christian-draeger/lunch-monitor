@@ -1,7 +1,11 @@
 Lunch Monitor [![Build Status](https://travis-ci.org/christian-draeger/lunch-monitor.svg?branch=master)](https://travis-ci.org/christian-draeger/lunch-monitor)
 =============
 
-**Kotlin only Stack:** Ktor, kotlinx.html, kotlinx.css, skrape{it}, gradle (with kotlin DSL)
+**This project is build with a Kotlin only Stack (because I wanted to try it):** 
+* [Ktor](https://ktor.io)
+* [kotlinx.html](https://github.com/Kotlin/kotlinx.html)
+* [Kotlin CSS DSL](https://github.com/olegcherr/Aza-Kotlin-CSS)
+* [skrape{it}](docs.skrape.it)
     
 ### Production usage
     
