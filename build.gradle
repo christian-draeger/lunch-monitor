@@ -20,7 +20,7 @@ sourceSets {
 }
 
 repositories {
-    mavenCentral()
+    mavenLocal()
     jcenter()
     maven { url 'https://kotlin.bintray.com/ktor' }
 }
@@ -32,7 +32,8 @@ dependencies {
     compile "io.ktor:ktor-html-builder:$ktor_version"
     compile "azadev.kotlin:aza-kotlin-css:1.0"
     compile "ch.qos.logback:logback-classic:$logback_version"
-    compile "it.skrape:core:0.4.0"
+    compile "it.skrape:skrapeit-core:0.5.1"
+    compile "it.skrape:skrapeit-ktor:1.0.0"
     testCompile "io.ktor:ktor-server-tests:$ktor_version"
     testCompile "org.junit.jupiter:junit-jupiter:5.4.0"
     testCompile "com.willowtreeapps.assertk:assertk-jvm:0.13"
